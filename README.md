@@ -45,6 +45,58 @@ python3 -m http.server 8899
 
 `.nojekyll` 不是可选项：GitHub Pages 默认用 Jekyll 构建，会忽略以下划线开头的目录，缺失该文件时 `_shared/js/echarts.min.js` 将 404。
 
+## 网络与代理
+
+国内网络访问 `github.com` 经常超时（`api.github.com` 通常可达，`github.com:443` 会被卡）。git 与 curl 都读同一组环境变量，配一次即可：
+
+```bash
+export HTTPS_PROXY=http://127.0.0.1:7890
+export HTTP_PROXY=http://127.0.0.1:7890
+export NO_PROXY=localhost,127.0.0.1,::1,.local   # 本地服务不走代理
+```
+
+**端口必须和你本机代理客户端一致**，7890 只是 Clash 的默认值：
+
+| 客户端 | 常见端口 |
+| --- | --- |
+| Clash / ClashX / Clash Verge | 7890（混合）、7897（Verge 默认） |
+| Surge | 6152 |
+| V2RayU / v2rayN | 1087（HTTP）、1080（SOCKS） |
+| sing-box | 2080 |
+| Shadowsocks | 1080 |
+
+先确认代理真的在跑，再导变量——否则 git/curl 会连一个不存在的端口，报错反而更迷惑：
+
+```bash
+lsof -nP -iTCP:7890 -sTCP:LISTEN            # 有输出 = 端口在监听
+curl -x http://127.0.0.1:7890 -I https://github.com   # 能拿到 200/301 = 代理可用
+```
+
+**三种配置层级，按需选：**
+
+```bash
+# 1) 只对这一次发版生效（脚本会同时给 git 和 curl 设置）
+./release.sh <新html> --notes notes/v2.12.md --proxy http://127.0.0.1:7890
+
+# 2) 只在当前终端窗口生效
+export HTTPS_PROXY=http://127.0.0.1:7890
+
+# 3) 只让 git 走代理（不影响其他命令，最不容易误伤）
+git config --global http.https://github.com.proxy http://127.0.0.1:7890
+git config --global --unset http.https://github.com.proxy   # 取消
+```
+
+开启代理后，`127.0.0.1:8899` 这类本地预览**不要**走代理，这也是 `NO_PROXY` 里要写 `localhost,127.0.0.1` 的原因。
+
+**没有代理也能推**：`ssh.github.com:443` 通常不受影响（`github.com:22` 也常常通），可以改用 SSH 推送：
+
+```bash
+ssh -T -p 443 git@ssh.github.com          # 返回 "Hi <you>!" 即通
+git remote set-url origin git@github.com:Jackieeee9/saas-new-car-qc-prd.git
+```
+
+此时推送走 SSH，而 Release、Pages 轮询走 `api.github.com`（一般可达），两条链路互不影响。
+
 ## 发版流程
 
 拿到新导出的原型 HTML 后，一条命令完成「替换 → 提交 → 打 tag → 推送 → 发 Release → 等 Pages 构建 → 线上验收」：

@@ -11,6 +11,7 @@
 #   ./release.sh --check new.html          # 只校验，不改任何东西
 #   ./release.sh --resume                  # 推送失败后接着跑（跳过提交）
 #   ./release.sh --push-only               # 只把本地提交推上去
+#   ./release.sh ... --proxy http://127.0.0.1:7890   # 本次走代理
 #   ./release.sh --save-token              # 把 token 存进 macOS Keychain
 #
 set -euo pipefail
@@ -44,6 +45,7 @@ BUMP=0
 SAVE_TOKEN=0
 RESUME=0
 PUSH_ONLY=0
+PROXY_URL=""
 BRANCH="main"
 
 while [ $# -gt 0 ]; do
@@ -60,12 +62,21 @@ while [ $# -gt 0 ]; do
     --save-token) SAVE_TOKEN=1; shift ;;
     --resume)     RESUME=1; shift ;;
     --push-only)  PUSH_ONLY=1; shift ;;
+    --proxy)      PROXY_URL="${2:-}"; shift 2 ;;
     -y|--yes)     ASSUME_YES=1; shift ;;
     -h|--help)    awk 'NR>=3 && /^#/ {sub(/^# ?/,""); print; next} NR>=3 {exit}' "$0"; exit 0 ;;
     -*)           die "未知参数: $1（--help 查看用法）" ;;
     *)            [ -z "$HTML" ] && HTML="$1" || die "多余参数: $1"; shift ;;
   esac
 done
+
+# ---------- 代理 ----------
+if [ -n "$PROXY_URL" ]; then
+  export https_proxy="$PROXY_URL" http_proxy="$PROXY_URL"
+  export HTTPS_PROXY="$PROXY_URL" HTTP_PROXY="$PROXY_URL"
+  export no_proxy="localhost,127.0.0.1,::1,.local" NO_PROXY="localhost,127.0.0.1,::1,.local"
+  info "使用代理 $PROXY_URL"
+fi
 
 # ---------- 仓库信息 ----------
 git rev-parse --git-dir >/dev/null 2>&1 || die "当前目录不是 git 仓库: $REPO_DIR"
@@ -228,7 +239,9 @@ printf '  源文件    %s（%s MB）\n' "$HTML" "$SIZE_MB"
 printf '  tag 校验  本地已通过；远端 %s\n' "$REMOTE_TAG_CHECK"
 printf '  README    %s\n' "$([ "$UPDATE_README" = 1 ] && echo '更新版本号与版本记录' || echo '不修改')"
 printf '  Release   %s\n' "$([ "$UPLOAD_ASSET" = 1 ] && echo '创建，并附上 HTML 附件' || echo '创建（不带附件）')"
-printf '  线上地址  %s\n\n' "$PAGE_URL"
+printf '  线上地址  %s\n' "$PAGE_URL"
+[ -n "$PROXY_URL" ] && printf '  代理      %s\n' "$PROXY_URL"
+printf '\n' 
 
 if [ "$DRY_RUN" = 1 ]; then
   ok "dry-run：以上为计划，未做任何改动"

@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# editors
+.vscode/
+.idea/
+*.swp
+
+# logs
+*.log
+
+# node (local tooling)
+node_modules/

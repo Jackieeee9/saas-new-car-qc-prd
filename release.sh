@@ -387,11 +387,25 @@ if [ "$BUILT" = 1 ]; then ok "Pages 构建完成"; else warn "等 Pages 超时�
 
 # ---------- 9. 验收 ----------
 info "线上验收 $PAGE_URL"
-CODE="$(curl -sS -m 60 --compressed -o /tmp/.release-check.html -w '%{http_code}' "$PAGE_URL?v=$VERSION")"
-[ "$CODE" = "200" ] || die "线上首页返回 HTTP $CODE"
-TITLE_ONLINE="$(grep -o '<title>[^<]*' /tmp/.release-check.html | head -1 | sed 's/<title>//')"
-ECH="$(curl -sS -m 60 -o /dev/null -w '%{http_code}' "${PAGE_URL}_shared/js/echarts.min.js")"
-[ "$ECH" = "200" ] || warn "echarts 返回 HTTP ${ECH}，图表可能失效（检查 .nojekyll）"
+CODE=""
+# Pages 首次回源与跨境线路可能很慢：给足超时并重试；验证失败只警告，不影响已完成的发布
+for attempt in 1 2 3; do
+  CODE="$(curl -sS -m 300 --compressed -o /tmp/.release-check.html -w '%{http_code}' \
+          "$PAGE_URL?v=$VERSION" 2>/dev/null || true)"
+  [ "$CODE" = "200" ] && break
+  warn "第 $attempt 次访问失败（HTTP ${CODE:-超时}），5 秒后重试"
+  sleep 5
+done
+
+if [ "$CODE" = "200" ]; then
+  TITLE_ONLINE="$(grep -o '<title>[^<]*' /tmp/.release-check.html | head -1 | sed 's/<title>//')"
+  ECH="$(curl -sS -m 120 -o /dev/null -w '%{http_code}' "${PAGE_URL}_shared/js/echarts.min.js" 2>/dev/null || true)"
+  [ "$ECH" = "200" ] || warn "echarts 返回 HTTP ${ECH:-超时}，图表可能失效（检查 .nojekyll）"
+  ok "线上页面可访问"
+else
+  warn "线上验证未完成（HTTP ${CODE:-超时}）；Pages 构建状态已是 built，稍后手动打开确认即可"
+  TITLE_ONLINE="未验证（网络超时）"
+fi
 rm -f /tmp/.release-check.html
 
 printf '\n%s发布完成 %s%s\n' "$B" "$VERSION" "$N"

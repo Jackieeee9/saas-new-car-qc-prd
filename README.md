@@ -2,7 +2,7 @@
 
 > 版本 **V2.11** ｜ 2026-10-23 ｜ 需求分析阶段
 
-在线预览：**https://<owner>.github.io/saas-new-car-qc-prd/**
+在线预览：**https://jackieeee9.github.io/saas-new-car-qc-prd/**
 
 ## 这是什么
 
@@ -23,7 +23,7 @@ SaaS 新车直销业务支持 AI 质检功能的需求文档与可交互高保�
 ## 本地运行
 
 ```bash
-git clone https://github.com/<owner>/saas-new-car-qc-prd.git
+git clone https://github.com/Jackieeee9/saas-new-car-qc-prd.git
 cd saas-new-car-qc-prd
 python3 -m http.server 8899
 # 打开 http://127.0.0.1:8899/

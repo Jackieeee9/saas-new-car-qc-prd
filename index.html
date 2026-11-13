@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN" data-trae-theme="light"><head>
 <style id="__________cytoscape_stylesheet">.__________cytoscape_container { position: relative; }</style><meta charset="UTF-8">
-<link rel="icon" href="data:,">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SaaS新车直销业务质检功能 - 需求框架与高保真原型</title>
 <style>
@@ -3602,14 +3601,14 @@ body.text-mode .text-mode-doc { display: block; }
   .order-detail-layout { grid-template-columns: 1fr; }
   .order-tasks-sidebar { position: static; }
 }</style></head>
-<body style="">
+<body>
 
 <!-- ===== Top Bar ===== -->
 <div class="top-bar">
   <div class="top-bar-title">
     <div class="logo">QC</div>
     <h1>SaaS新车直销业务质检功能</h1>
-    <span class="version-tag" data-edit-key="versionTag" title="可编辑，点击保存修改后生效">V2.11· 需求框架与原型</span>
+    <span class="version-tag" data-edit-key="versionTag" title="可编辑，点击保存修改后生效">V2.12· 需求框架与原型</span>
   </div>
   <div class="mode-toggle">
     <button class="mode-btn active" type="button" onclick="switchMode('preview')">原型预览</button>
@@ -3621,8 +3620,8 @@ body.text-mode .text-mode-doc { display: block; }
 <div class="main-layout">
 
   <!-- ===== Left Panel: Prototype ===== -->
-  <div class="left-panel" id="leftPanel" style="flex: 0 0 70%;">
-    <div class="browser-frame" id="browserFrame" style="transform: scale(0.871875); left: 20px; top: 101.031px;">
+  <div class="left-panel" id="leftPanel">
+    <div class="browser-frame" id="browserFrame" style="transform: scale(0.535937); left: 20px; top: 238.766px;">
       <div class="browser-toolbar">
         <div class="browser-dots">
           <span class="dot-red"></span>
@@ -4097,7 +4096,7 @@ body.text-mode .text-mode-doc { display: block; }
               <div class="proto-header">
                 <div>
                   <h2>微信质检详情</h2>
-                  <div class="proto-breadcrumb">质检中心 / 微信质检 / WX20260813003</div>
+                  <div class="proto-breadcrumb">质检中心 / 微信质检 / WX20260803001</div>
                 </div>
                 <div style="display:flex;gap:8px;">
                   <button class="btn btn-secondary" type="button" onclick="navigate('page-wechat-inspection')">返回列表</button>
@@ -4110,25 +4109,26 @@ body.text-mode .text-mode-doc { display: block; }
                   <div class="detail-header">
                 <h3>质检信息</h3>
                 <div class="detail-info-grid">
-                  <div class="detail-info-item"><div class="label">质检任务编号</div><div class="value">WX20260813003</div></div>
+                  <div class="detail-info-item"><div class="label">质检任务编号</div><div class="value">WX20260803001</div></div>
                   <div class="detail-info-item"><div class="label">质检类别</div><div class="value">个人微信</div></div>
-                  <div class="detail-info-item"><div class="label">中台工作微信号</div><div class="value">刘某_工作微信</div></div>
-                  <div class="detail-info-item"><div class="label">中台人员</div><div class="value">刘某</div></div>
+                  <div class="detail-info-item"><div class="label">中台工作微信号</div><div class="value">wx_zhou001</div></div>
+                  <div class="detail-info-item"><div class="label">中台人员</div><div class="value">周某</div></div>
                   <div class="detail-info-item"><div class="label">质检人员</div><div class="value">赵质检</div></div>
-                  <div class="detail-info-item"><div class="label">客户微信号</div><div class="value">wx_kh_G</div></div>
-                  <div class="detail-info-item"><div class="label">AI质检日期</div><div class="value">2026-08-13</div></div>
+                  <div class="detail-info-item"><div class="label">客户微信号</div><div class="value">wx_li_0702</div></div>
+                  <div class="detail-info-item"><div class="label">AI质检日期</div><div class="value">2026-08-03</div></div>
                   <div class="detail-info-item"><div class="label">AI质检结果</div><div class="value"><span class="badge badge-danger">不合格</span></div></div>
                   <div class="detail-info-item"><div class="label">质检状态</div><div class="value"><span class="badge badge-warning">待复检</span></div></div>
                   <div class="detail-info-item"><div class="label">人工复检结果</div><div class="value"><span class="badge badge-warning">待复检</span></div></div>
                 </div>
               </div>
 
-              <div class="ai-result-card" data-link="feature-ai-result"><div class="ai-result-header">
+              <div class="ai-result-card" data-link="feature-ai-result">
+                <div class="ai-result-header">
                   <div class="ai-result-title">
                     <svg class="icon-svg" style="width:18px;height:18px;color:var(--primary-color);" viewBox="0 0 16 16"><path d="M8 0L9.5 5.5L15 5.5L10.5 9L12 14.5L8 11L4 14.5L5.5 9L1 5.5L6.5 5.5L8 0Z"></path></svg>
                     AI质检结果
                   </div>
-                </div><div style="font-size:13px;font-weight:600;color:var(--text-secondary);margin-bottom:6px;">AI质检整体结果 <span style="color:var(--danger-color);font-weight:600;margin-left:6px;">不通过</span></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">服务忌语</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon warn">!</div><div class="inspection-content"><div class="inspection-name">合规禁用词</div><div class="inspection-desc" style="color:var(--danger-color);">命中 · 文字消息记录①</div></div></div><div class="callout" style="margin-top:8px;font-size:12px;color:var(--text-muted);">注：AI质检按上表合规规则逐项核查。若任一项"命中"，则AI质检结果为不合格，需进行人工复检。</div></div>
+                </div><div style="font-size:13px;font-weight:600;color:var(--text-secondary);margin-bottom:6px;">AI质检整体结果 <span style="color:var(--success-color);font-weight:600;margin-left:6px;">通过</span></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">服务忌语</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">合规禁用词</div><div class="inspection-desc">未命中</div></div></div><div class="callout" style="margin-top:8px;font-size:12px;color:var(--text-muted);">注：AI质检按上表合规规则逐项核查。若任一项"命中"，则AI质检结果为不合格，需进行人工复检。</div></div>
 
               <div style="margin-bottom:12px;">
                 <div class="comm-tabs">
@@ -4218,7 +4218,7 @@ body.text-mode .text-mode-doc { display: block; }
               <div class="proto-header">
                 <div>
                   <h2>通话质检详情</h2>
-                  <div class="proto-breadcrumb">质检中心 / 通话质检 / CALL20260815001</div>
+                  <div class="proto-breadcrumb">质检中心 / 通话质检 / CALL20260803001</div>
                 </div>
                 <div style="display:flex;gap:8px;">
                   <button class="btn btn-secondary" type="button" onclick="navigate('page-call-inspection')">返回列表</button>
@@ -4231,28 +4231,29 @@ body.text-mode .text-mode-doc { display: block; }
                   <div class="detail-header">
                 <h3>质检信息</h3>
                 <div class="detail-info-grid">
-                  <div class="detail-info-item"><div class="label">质检任务编号</div><div class="value">CALL20260815001</div></div>
+                  <div class="detail-info-item"><div class="label">质检任务编号</div><div class="value">CALL20260803001</div></div>
                   <div class="detail-info-item"><div class="label">质检类别</div><div class="value">中台语音外呼</div></div>
-                  <div class="detail-info-item" style=""><div class="label">项目</div><div class="value"></div></div>
-                  <div class="detail-info-item"><div class="label">中台手机号</div><div class="value">138****1015</div></div>
-                  <div class="detail-info-item"><div class="label">客户手机号</div><div class="value">139****2015</div></div>
-                  <div class="detail-info-item"><div class="label">中台人员</div><div class="value">陈某</div></div>
+                  <div class="detail-info-item"><div class="label">项目</div><div class="value">某品牌A</div></div>
+                  <div class="detail-info-item"><div class="label">中台手机号</div><div class="value">138****1234</div></div>
+                  <div class="detail-info-item"><div class="label">客户手机号</div><div class="value">139****2002</div></div>
+                  <div class="detail-info-item"><div class="label">中台人员</div><div class="value">吴某</div></div>
                   <div class="detail-info-item"><div class="label">质检人员</div><div class="value">钱质检</div></div>
-                  <div class="detail-info-item" style=""><div class="label">SaaS订单编号</div><div class="value">DD20260815001</div></div>
-                  <div class="detail-info-item" style=""><div class="label">是否已成交</div><div class="value"><span class="badge badge-success">已成交</span></div></div>
-                  <div class="detail-info-item"><div class="label">AI质检日期</div><div class="value">2026-08-15</div></div>
+                  <div class="detail-info-item"><div class="label">SaaS订单编号</div><div class="value">DD20260802002<br>DD20260802003<br>DD20260802004</div></div>
+                  <div class="detail-info-item"><div class="label">是否已成交</div><div class="value"><span class="badge badge-success">已成交</span></div></div>
+                  <div class="detail-info-item"><div class="label">AI质检日期</div><div class="value">2026-08-03</div></div>
                   <div class="detail-info-item"><div class="label">AI质检结果</div><div class="value"><span class="badge badge-danger">不合格</span></div></div>
                   <div class="detail-info-item"><div class="label">质检状态</div><div class="value"><span class="badge badge-warning">待复检</span></div></div>
                   <div class="detail-info-item"><div class="label">人工复检结果</div><div class="value"><span class="badge badge-warning">待复检</span></div></div>
                 </div>
               </div>
 
-              <div class="ai-result-card" data-link="feature-ai-result"><div class="ai-result-header">
+              <div class="ai-result-card" data-link="feature-ai-result">
+                <div class="ai-result-header">
                   <div class="ai-result-title">
                     <svg class="icon-svg" style="width:18px;height:18px;color:var(--primary-color);" viewBox="0 0 16 16"><path d="M8 0L9.5 5.5L15 5.5L10.5 9L12 14.5L8 11L4 14.5L5.5 9L1 5.5L6.5 5.5L8 0Z"></path></svg>
                     AI质检结果
                   </div>
-                </div><div style="font-size:13px;font-weight:600;color:var(--text-secondary);margin-bottom:6px;">AI质检整体结果 <span style="color:var(--danger-color);font-weight:600;margin-left:6px;">不通过</span></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">服务忌语</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">合规禁用词</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">购车/融资信息核实</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">个人信息核实</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">基本信息核实</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">核实购车真实性</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">核实用途真实性</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">个人直系亲属信息核实</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon warn">!</div><div class="inspection-content"><div class="inspection-name">个人其他联系人信息核实</div><div class="inspection-desc" style="color:var(--danger-color);">命中 · 语音通话记录①</div></div></div><div class="callout" style="margin-top:8px;font-size:12px;color:var(--text-muted);">注：AI质检按上表合规规则逐项核查。若任一项"命中"，则AI质检结果为不合格，需进行人工复检。</div></div>
+                </div><div style="font-size:13px;font-weight:600;color:var(--text-secondary);margin-bottom:6px;">AI质检整体结果 <span style="color:var(--danger-color);font-weight:600;margin-left:6px;">不通过</span></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">直系亲属融资购车核实</div><div class="inspection-desc">已说明</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">直系亲属基本信息核实</div><div class="inspection-desc">已说明</div></div></div><div class="inspection-item"><div class="inspection-icon fail">✗</div><div class="inspection-content"><div class="inspection-name">直系亲属核实购车</div><div class="inspection-desc" style="color:var(--danger-color);">未说明</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">直系亲属个人信息核实</div><div class="inspection-desc">已说明</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">其他联系人个人信息核实</div><div class="inspection-desc">已说明</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">服务忌语</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">合规禁用词</div><div class="inspection-desc">未命中</div></div></div><div class="callout" style="margin-top:8px;font-size:12px;color:var(--text-muted);">注：AI质检按上表规则逐项核查。命中类规则（服务忌语、合规禁用词）任一命中，或说明类规则任一未说明，则AI质检结果为不合格，需进行人工复检。</div></div>
 
               <div style="margin-bottom:12px;">
                 <div class="comm-tabs">
@@ -4352,7 +4353,7 @@ body.text-mode .text-mode-doc { display: block; }
               <div class="proto-header">
                 <div>
                   <h2>视频质检详情</h2>
-                  <div class="proto-breadcrumb">质检中心 / 视频质检 / VID20260815001</div>
+                  <div class="proto-breadcrumb">质检中心 / 视频质检 / VID20260730010</div>
                 </div>
                 <div style="display:flex;gap:8px;">
                   <button class="btn btn-secondary" type="button" onclick="navigate('page-video-inspection')">返回列表</button>
@@ -4365,26 +4366,27 @@ body.text-mode .text-mode-doc { display: block; }
                   <div class="detail-header">
                 <h3>质检信息</h3>
                 <div class="detail-info-grid">
-                  <div class="detail-info-item"><div class="label">质检任务编号</div><div class="value">VID20260815001</div></div>
+                  <div class="detail-info-item"><div class="label">质检任务编号</div><div class="value">VID20260730010</div></div>
                   <div class="detail-info-item"><div class="label">质检类别</div><div class="value">场景风控视频</div></div>
-                  <div class="detail-info-item"><div class="label">SaaS订单编号</div><div class="value">DD20260815001</div></div>
+                  <div class="detail-info-item"><div class="label">SaaS订单编号</div><div class="value">DD20260802002</div></div>
                   <div class="detail-info-item"><div class="label">是否已成交</div><div class="value"><span class="badge badge-success">已成交</span></div></div>
-                  <div class="detail-info-item"><div class="label">项目</div><div class="value">某品牌A</div></div>
-                  <div class="detail-info-item"><div class="label">中台人员</div><div class="value">周某</div></div>
-                  <div class="detail-info-item"><div class="label">质检人员</div><div class="value">钱质检</div></div>
-                  <div class="detail-info-item"><div class="label">AI质检日期</div><div class="value">2026-08-15</div></div>
+                  <div class="detail-info-item"><div class="label">项目</div><div class="value">某品牌B</div></div>
+                  <div class="detail-info-item"><div class="label">中台人员</div><div class="value">吴某</div></div>
+                  <div class="detail-info-item"><div class="label">质检人员</div><div class="value">孙质检</div></div>
+                  <div class="detail-info-item"><div class="label">AI质检日期</div><div class="value">2026-08-03</div></div>
                   <div class="detail-info-item"><div class="label">AI质检结果</div><div class="value"><span class="badge badge-danger">不合格</span></div></div>
                   <div class="detail-info-item"><div class="label">质检状态</div><div class="value"><span class="badge badge-warning">待复检</span></div></div>
                   <div class="detail-info-item"><div class="label">人工复检结果</div><div class="value"><span class="badge badge-warning">待复检</span></div></div>
                 </div>
               </div>
 
-              <div class="ai-result-card" data-link="feature-ai-result"><div class="ai-result-header">
+              <div class="ai-result-card" data-link="feature-ai-result">
+                <div class="ai-result-header">
                   <div class="ai-result-title">
                     <svg class="icon-svg" style="width:18px;height:18px;color:var(--primary-color);" viewBox="0 0 16 16"><path d="M8 0L9.5 5.5L15 5.5L10.5 9L12 14.5L8 11L4 14.5L5.5 9L1 5.5L6.5 5.5L8 0Z"></path></svg>
                     AI质检结果
                   </div>
-                </div><div style="font-size:13px;font-weight:600;color:var(--text-secondary);margin-bottom:6px;">AI质检整体结果 <span style="color:var(--danger-color);font-weight:600;margin-left:6px;">不通过</span></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">服务忌语</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">合规禁用词</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">个人信息</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">购车信息</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">职业与收入情况</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">居住与工作地址</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">直系亲属信息</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon warn">!</div><div class="inspection-content"><div class="inspection-name">融资信息</div><div class="inspection-desc" style="color:var(--danger-color);">命中 · 视频沟通记录①</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">法律责任与征信</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">视频核验</div><div class="inspection-desc">未命中</div></div></div><div class="callout" style="margin-top:8px;font-size:12px;color:var(--text-muted);">注：AI质检按上表合规规则逐项核查。若任一项"命中"，则AI质检结果为不合格，需进行人工复检。</div></div>
+                </div><div style="font-size:13px;font-weight:600;color:var(--text-secondary);margin-bottom:6px;">AI质检整体结果 <span style="color:var(--success-color);font-weight:600;margin-left:6px;">通过</span></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">购车信息</div><div class="inspection-desc">已说明</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">融资信息</div><div class="inspection-desc">已说明</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">融资风险信息</div><div class="inspection-desc">已说明</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">视频核验</div><div class="inspection-desc">已说明</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">法律与征信</div><div class="inspection-desc">已说明</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">直系亲属信息</div><div class="inspection-desc">已说明</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">职业与收入情况</div><div class="inspection-desc">已说明</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">居住与工作地址</div><div class="inspection-desc">已说明</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">个人信息</div><div class="inspection-desc">已说明</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">服务忌语</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">合规禁用词</div><div class="inspection-desc">未命中</div></div></div><div class="callout" style="margin-top:8px;font-size:12px;color:var(--text-muted);">注：AI质检按上表规则逐项核查。命中类规则（服务忌语、合规禁用词）任一命中，或说明类规则任一未说明，则AI质检结果为不合格，需进行人工复检。</div></div>
 
               <div style="margin-bottom:12px;">
                 <div class="comm-tabs">
@@ -4495,7 +4497,7 @@ body.text-mode .text-mode-doc { display: block; }
               <div class="proto-header">
                 <div>
                   <h2>短信质检详情</h2>
-                  <div class="proto-breadcrumb">质检中心 / 短信质检 / SMS20260803002</div>
+                  <div class="proto-breadcrumb">质检中心 / 短信质检 / SMS20260803001</div>
                 </div>
                 <div style="display:flex;gap:8px;">
                   <button class="btn btn-secondary" type="button" onclick="navigate('page-sms-inspection')">返回列表</button>
@@ -4508,25 +4510,26 @@ body.text-mode .text-mode-doc { display: block; }
                   <div class="detail-header">
                 <h3>质检信息</h3>
                 <div class="detail-info-grid">
-                  <div class="detail-info-item"><div class="label">质检任务编号</div><div class="value">SMS20260803002</div></div>
+                  <div class="detail-info-item"><div class="label">质检任务编号</div><div class="value">SMS20260803001</div></div>
                   <div class="detail-info-item"><div class="label">质检类别</div><div class="value">短信</div></div>
-                  <div class="detail-info-item"><div class="label">中台手机号</div><div class="value">138****1002</div></div>
-                  <div class="detail-info-item"><div class="label">中台人员</div><div class="value">吴某</div></div>
+                  <div class="detail-info-item"><div class="label">中台手机号</div><div class="value">138****5678</div></div>
+                  <div class="detail-info-item"><div class="label">中台人员</div><div class="value">陈某</div></div>
                   <div class="detail-info-item"><div class="label">质检人员</div><div class="value">李质检</div></div>
-                  <div class="detail-info-item"><div class="label">客户手机号</div><div class="value">139****2002</div></div>
+                  <div class="detail-info-item"><div class="label">客户手机号</div><div class="value">139****8888</div></div>
                   <div class="detail-info-item"><div class="label">AI质检日期</div><div class="value">2026-08-03</div></div>
-                  <div class="detail-info-item"><div class="label">AI质检结果</div><div class="value"><span class="badge badge-danger">不合格</span></div></div>
-                  <div class="detail-info-item"><div class="label">质检状态</div><div class="value"><span class="badge badge-warning">待复检</span></div></div>
+                  <div class="detail-info-item"><div class="label">AI质检结果</div><div class="value"><span class="badge badge-success">合格</span></div></div>
+                  <div class="detail-info-item"><div class="label">质检状态</div><div class="value"><span class="badge badge-info">已完成</span></div></div>
                   <div class="detail-info-item"><div class="label">人工复检结果</div><div class="value">－</div></div>
                 </div>
               </div>
 
-              <div class="ai-result-card" data-link="feature-ai-result"><div class="ai-result-header">
+              <div class="ai-result-card" data-link="feature-ai-result">
+                <div class="ai-result-header">
                   <div class="ai-result-title">
                     <svg class="icon-svg" style="width:18px;height:18px;color:var(--primary-color);" viewBox="0 0 16 16"><path d="M8 0L9.5 5.5L15 5.5L10.5 9L12 14.5L8 11L4 14.5L5.5 9L1 5.5L6.5 5.5L8 0Z"></path></svg>
                     AI质检结果
                   </div>
-                </div><div style="font-size:13px;font-weight:600;color:var(--text-secondary);margin-bottom:6px;">AI质检整体结果 <span style="color:var(--danger-color);font-weight:600;margin-left:6px;">不通过</span></div><div class="inspection-item"><div class="inspection-icon warn">!</div><div class="inspection-content"><div class="inspection-name">服务忌语</div><div class="inspection-desc" style="color:var(--danger-color);">命中 · 短信记录①</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">合规禁用词</div><div class="inspection-desc">未命中</div></div></div><div class="callout" style="margin-top:8px;font-size:12px;color:var(--text-muted);">注：AI质检按上表合规规则逐项核查。若任一项"命中"，则AI质检结果为不合格，需进行人工复检。</div></div>
+                </div><div style="font-size:13px;font-weight:600;color:var(--text-secondary);margin-bottom:6px;">AI质检整体结果 <span style="color:var(--success-color);font-weight:600;margin-left:6px;">通过</span></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">服务忌语</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">合规禁用词</div><div class="inspection-desc">未命中</div></div></div><div class="callout" style="margin-top:8px;font-size:12px;color:var(--text-muted);">注：AI质检按上表合规规则逐项核查。若任一项"命中"，则AI质检结果为不合格，需进行人工复检。</div></div>
 
               <div style="margin-bottom:12px;">
                 <div class="comm-tabs">
@@ -4546,7 +4549,6 @@ body.text-mode .text-mode-doc { display: block; }
                       <strong>[短信] 系统：</strong>【XX金融】李先生，您的汽车金融方案已审批通过，请登录SaaS平台查看详情。<br>
                     </div>
                     <div class="comm-ai-note" style="margin-top:10px;">
-                      <div style="font-size:12.5px;color:var(--text-muted,#667085);"><strong>AI质检合格：</strong>未命中"服务忌语""合规禁用词"两项规则。</div>
                       <div style="margin-top:8px;"><button class="table-action" type="button" onclick="openModal('modalChatFullSms1')">点击查看全部</button></div>
                     </div>
                   </div>
@@ -4562,7 +4564,6 @@ body.text-mode .text-mode-doc { display: block; }
                       <strong>[短信] 陈某：</strong>【XX金融】李先生，提醒您按时还款，逾期会产生违约金。<br>
                     </div>
                     <div class="comm-ai-note" style="margin-top:10px;">
-                      <div style="font-size:12.5px;color:var(--text-muted,#667085);"><strong>AI质检合格：</strong>未命中"服务忌语""合规禁用词"两项规则。</div>
                       <div style="margin-top:8px;"><button class="table-action" type="button" onclick="openModal('modalChatFullSms2')">点击查看全部</button></div>
                     </div>
                   </div>
@@ -4776,7 +4777,7 @@ body.text-mode .text-mode-doc { display: block; }
                         <svg class="icon-svg" style="width:16px;height:16px;color:var(--primary-color);" viewBox="0 0 16 16"><path d="M8 0L9.5 5.5L15 5.5L10.5 9L12 14.5L8 11L4 14.5L5.5 9L1 5.5L6.5 5.5L8 0Z"></path></svg>
                         AI质检结果
                       </div>
-                    </div><div style="font-size:13px;font-weight:600;color:var(--text-secondary);margin-bottom:6px;">AI质检整体结果 <span style="color:var(--danger-color);font-weight:600;margin-left:6px;">不通过</span></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">服务忌语</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">合规禁用词</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon warn">!</div><div class="inspection-content"><div class="inspection-name">购车/融资信息核实</div><div class="inspection-desc" style="color:var(--danger-color);">命中 · 语音通话记录①</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">个人信息核实</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">基本信息核实</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">核实购车真实性</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">核实用途真实性</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">个人直系亲属信息核实</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">个人其他联系人信息核实</div><div class="inspection-desc">未命中</div></div></div><div class="callout" style="margin-top:8px;font-size:12px;color:var(--text-muted);">注：AI质检按上表合规规则逐项核查。若任一项"命中"，则AI质检结果为不合格，需进行人工复检。</div></div>
+                    </div><div style="font-size:13px;font-weight:600;color:var(--text-secondary);margin-bottom:6px;">AI质检整体结果 <span style="color:var(--danger-color);font-weight:600;margin-left:6px;">不通过</span></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">直系亲属融资购车核实</div><div class="inspection-desc">已说明</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">直系亲属基本信息核实</div><div class="inspection-desc">已说明</div></div></div><div class="inspection-item"><div class="inspection-icon fail">✗</div><div class="inspection-content"><div class="inspection-name">直系亲属核实购车</div><div class="inspection-desc" style="color:var(--danger-color);">未说明</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">直系亲属个人信息核实</div><div class="inspection-desc">已说明</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">其他联系人个人信息核实</div><div class="inspection-desc">已说明</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">服务忌语</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">合规禁用词</div><div class="inspection-desc">未命中</div></div></div><div class="callout" style="margin-top:8px;font-size:12px;color:var(--text-muted);">注：AI质检按上表规则逐项核查。命中类规则（服务忌语、合规禁用词）任一命中，或说明类规则任一未说明，则AI质检结果为不合格，需进行人工复检。</div></div>
 
                   <div>
                     <div class="comm-tabs">
@@ -4853,7 +4854,7 @@ body.text-mode .text-mode-doc { display: block; }
                     </div>
                     <div class="form-group">
                       <label class="form-label">复检说明 <span class="required" id="review-remark-required">*</span></label>
-                      <textarea class="form-textarea" id="review-remark" placeholder="请详细说明复检发现及判定依据...">经人工核实，02:15时段中台人员确实存在未按"购车/融资信息核实"规则进行信息核实的表述，但结合上下文语境，该表述属于口语化表达，实际已在前文说明了利率浮动机制。建议标记为轻微违规，纳入团队培训案例。</textarea>
+                      <textarea class="form-textarea" id="review-remark" placeholder="请详细说明复检发现及判定依据...">经人工核实，02:15时段中台人员确实存在未按"直系亲属融资购车核实"规则进行信息核实的表述，但结合上下文语境，该表述属于口语化表达，实际已在前文说明了利率浮动机制。建议标记为轻微违规，纳入团队培训案例。</textarea>
                     </div>
                     <div class="form-group">
                       <label class="form-label">案例标记</label>
@@ -4924,7 +4925,7 @@ body.text-mode .text-mode-doc { display: block; }
                         <svg class="icon-svg" style="width:16px;height:16px;color:var(--primary-color);" viewBox="0 0 16 16"><path d="M8 0L9.5 5.5L15 5.5L10.5 9L12 14.5L8 11L4 14.5L5.5 9L1 5.5L6.5 5.5L8 0Z"></path></svg>
                         AI质检结果
                       </div>
-                    </div><div style="font-size:13px;font-weight:600;color:var(--text-secondary);margin-bottom:6px;">AI质检整体结果 <span style="color:var(--success-color);font-weight:600;margin-left:6px;">通过</span></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">服务忌语</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">合规禁用词</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">个人信息</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">购车信息</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">职业与收入情况</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">居住与工作地址</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">直系亲属信息</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">融资信息</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">法律责任与征信</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">视频核验</div><div class="inspection-desc">未命中</div></div></div><div class="callout" style="margin-top:8px;font-size:12px;color:var(--text-muted);">注：AI质检按上表合规规则逐项核查。若任一项"命中"，则AI质检结果为不合格，需进行人工复检。</div></div>
+                    </div><div style="font-size:13px;font-weight:600;color:var(--text-secondary);margin-bottom:6px;">AI质检整体结果 <span style="color:var(--success-color);font-weight:600;margin-left:6px;">通过</span></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">购车信息</div><div class="inspection-desc">已说明</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">融资信息</div><div class="inspection-desc">已说明</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">融资风险信息</div><div class="inspection-desc">已说明</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">视频核验</div><div class="inspection-desc">已说明</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">法律与征信</div><div class="inspection-desc">已说明</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">直系亲属信息</div><div class="inspection-desc">已说明</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">职业与收入情况</div><div class="inspection-desc">已说明</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">居住与工作地址</div><div class="inspection-desc">已说明</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">个人信息</div><div class="inspection-desc">已说明</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">服务忌语</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">合规禁用词</div><div class="inspection-desc">未命中</div></div></div><div class="callout" style="margin-top:8px;font-size:12px;color:var(--text-muted);">注：AI质检按上表规则逐项核查。命中类规则（服务忌语、合规禁用词）任一命中，或说明类规则任一未说明，则AI质检结果为不合格，需进行人工复检。</div></div>
 
                   <div>
                     <div class="comm-tabs">
@@ -5499,11 +5500,11 @@ body.text-mode .text-mode-doc { display: block; }
                     <tr>
                       <th style="width:36px;"><input type="checkbox" onclick="toggleBatchSelectAll(this)"></th>
                       <th>质检任务编号</th>
-                      <th>绑定微信号</th>
+                      <th>中台工作微信号</th>
                       <th>微信类型</th>
                       <th>中台人员</th>
                       <th>质检人员</th>
-                      <th>客户微信昵称</th>
+                      <th>客户微信号</th>
                       <th>AI质检日期</th>
                       <th>AI结果</th>
                       <th>状态</th>
@@ -6497,7 +6498,7 @@ body.text-mode .text-mode-doc { display: block; }
               <div class="proto-header">
                 <div>
                   <h2>SaaS订单质检详情</h2>
-                  <div class="proto-breadcrumb">质检中心 / 质检记录 / <span id="orderDetailTitle">DD20260802001</span></div>
+                  <div class="proto-breadcrumb">质检中心 / 质检记录 / <span id="orderDetailTitle"></span></div>
                 </div>
                 <div>
                   <button class="btn btn-secondary" type="button" onclick="navigate('page-inspection-log')">返回列表</button>
@@ -6505,17 +6506,17 @@ body.text-mode .text-mode-doc { display: block; }
               </div>
 
               <div class="callout" style="margin-bottom:12px;">
-                以 SaaS 订单为维度展示质检概况，本订单共 <strong id="orderTaskCount">1个质检任务（语音质检1个）</strong>。该详情页仅用于审计查看，不提供人工复检入口；AI 质检结果仅标注命中来源记录（语音通话记录/视频沟通记录/文字消息记录/短信记录及其序号），具体命中明细与时段由外部 AI 接口返回，本平台不展示 AI 模型内部命中的细节内容；质检人员为任务关联的质检员，在左侧质检基本信息中展示。
+                以 SaaS 订单为维度展示质检概况，本订单共 <strong id="orderTaskCount"></strong>。该详情页仅用于审计查看，不提供人工复检入口；AI 质检结果仅标注命中来源记录（语音通话记录/视频沟通记录/文字消息记录/短信记录及其序号），具体命中明细与时段由外部 AI 接口返回，本平台不展示 AI 模型内部命中的细节内容；质检人员为任务关联的质检员，在左侧质检基本信息中展示。
               </div>
 
               <div class="detail-header">
                 <h3>SaaS订单信息</h3>
-                <div class="detail-info-grid" id="orderInfoGrid"><div class="detail-info-item"><div class="label">SaaS订单编号</div><div class="value"><strong>DD20260802001</strong></div></div><div class="detail-info-item"><div class="label">项目</div><div class="value">某品牌A</div></div><div class="detail-info-item"><div class="label">中台人员</div><div class="value">周某</div></div><div class="detail-info-item"><div class="label">创单时间</div><div class="value">2026-08-09 02:10:33</div></div><div class="detail-info-item"><div class="label">是否已成交</div><div class="value"><span class="badge badge-success">已成交</span></div></div><div class="detail-info-item"><div class="label">影响分析</div><div class="value"><span class="badge badge-neutral">无明显影响</span></div></div></div>
+                <div class="detail-info-grid" id="orderInfoGrid"></div>
               </div>
 
               <div class="order-detail-layout">
-                <aside class="order-tasks-sidebar" id="orderTasksList"><div class="sidebar-group-title">语音质检信息</div><button class="task-list-item active" data-idx="0" type="button" onclick="selectOrderTask(0)"><div class="tl-name"><span class="badge badge-info">语音质检</span> CALL20260802001</div><div class="tl-grid"><div class="tl-cell"><div class="tl-cell-label">检核类别</div><div class="tl-cell-val">中台语音外呼话术合规检核</div></div><div class="tl-cell"><div class="tl-cell-label">AI质检日期</div><div class="tl-cell-val">2026-08-08</div></div><div class="tl-cell"><div class="tl-cell-label">沟通记录类型</div><div class="tl-cell-val">语音通话记录</div></div><div class="tl-cell"><div class="tl-cell-label">状态</div><div class="tl-cell-val">已完成</div></div><div class="tl-cell"><div class="tl-cell-label">AI质检结果</div><div class="tl-cell-val"><span class="badge badge-success">合格</span></div></div><div class="tl-cell"><div class="tl-cell-label">人工复检结果</div><div class="tl-cell-val">-</div></div><div class="tl-cell"><div class="tl-cell-label">质检人员</div><div class="tl-cell-val">赵质检</div></div></div></button></aside>
-                <section class="order-task-panel" id="orderTaskPanel"><div class="order-task-panel-head"><h4>◇ 语音质检 · CALL20260802001 <span class="badge badge-info">语音质检 · SAAS平台外呼</span></h4></div><div class="ai-result-card"><div class="ai-result-header"><div class="ai-result-title">AI质检结果</div></div><div style="font-size:13px;font-weight:600;color:var(--text-secondary);margin-bottom:6px;">AI质检整体结果 <span style="color:var(--success-color);font-weight:600;margin-left:6px;">通过</span></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">服务忌语</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">合规禁用词</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">购车/融资信息核实</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">个人信息核实</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">基本信息核实</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">核实购车真实性</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">核实用途真实性</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">个人直系亲属信息核实</div><div class="inspection-desc">未命中</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">个人其他联系人信息核实</div><div class="inspection-desc">未命中</div></div></div><div class="callout" style="margin-top:8px;font-size:12px;color:var(--text-muted);">注：AI质检按上表合规规则逐项核查。若任一项"命中"，则AI质检结果为不合格，需进行人工复检。</div></div><div class="comm-sub-title" style="margin-top:12px;">语音通话记录（来源标注）</div><div class="comm-record"><div class="comm-record-header"><div class="comm-record-type"><span class="comm-record-num">1</span> <span class="badge badge-info">SAAS平台外呼</span> 中台 → 客户 <span style="font-size:12px;color:var(--primary-color);font-weight:500;margin-left:4px;">语音通话记录1（AI命中来源）</span></div><div class="comm-record-time">2026-08-02 14:35 | 时长 08:32</div></div><div class="audio-player-mock"><button class="audio-play-btn" type="button">▶</button><div class="audio-progress"></div><span class="audio-time">00:00 / 08:32</span></div><div class="transcript"><strong>中台：</strong>您好，李先生，我是XX金融华南中台的客服周某，工号0001，致电是关于您申请的某品牌A汽车金融方案，如下说明请您知悉。<br><br><strong>中台：</strong>利率方面按合同约定执行，若提前结清需按合同进行，具体以合同文本为准。<br><br><strong>中台：</strong>还款方式为等额本息，分36期，每期还款金额在我司APP内可查。<br><br><strong>客户：</strong>好的，那逾期会有什么影响？<br><br><strong>中台：</strong>如未按时还款，会产生逾期并影响个人征信，请您务必按时足额还款。<br><br><strong>客户：</strong>明白了，我同意这个方案。<br><br></div></div></section>
+                <aside class="order-tasks-sidebar" id="orderTasksList"></aside>
+                <section class="order-task-panel" id="orderTaskPanel"></section>
               </div>
             </div>
           </div>
@@ -7179,10 +7180,10 @@ body.text-mode .text-mode-doc { display: block; }
   <!-- ===== Right Panel: Document ===== -->
   <div class="right-panel">
     <div class="tab-bar">
-      <button class="tab-btn" type="button" data-tab="tab-revision" onclick="switchTab('tab-revision')">需求修订记录</button>
+      <button class="tab-btn active" type="button" data-tab="tab-revision" onclick="switchTab('tab-revision')">需求修订记录</button>
       <button class="tab-btn" type="button" data-tab="tab-overview" onclick="switchTab('tab-overview')">需求概览</button>
       <button class="tab-btn" type="button" data-tab="tab-design" onclick="switchTab('tab-design')">产品设计</button>
-      <button class="tab-btn active" type="button" data-tab="tab-detail" onclick="switchTab('tab-detail')">功能详情</button>
+      <button class="tab-btn" type="button" data-tab="tab-detail" onclick="switchTab('tab-detail')">功能详情</button>
       <button class="tab-btn" type="button" data-tab="tab-rules" onclick="switchTab('tab-rules')">规则与约束</button>
       <button class="tab-btn" type="button" data-tab="tab-flow" onclick="switchTab('tab-flow')">流程图</button>
       <button class="tab-btn" type="button" data-tab="tab-mindmap" onclick="switchTab('tab-mindmap')">思维导图</button>
@@ -7192,7 +7193,7 @@ body.text-mode .text-mode-doc { display: block; }
     <div class="tab-content-wrapper" id="tabContentWrapper">
 
       <!-- Tab: Revision Log -->
-      <div class="tab-pane" id="tab-revision">
+      <div class="tab-pane active" id="tab-revision">
         
         
         <div class="edit-mode-banner"><span class="dot"></span>此页签支持富文本编辑，通过上方工具栏可调整文字格式、插入/删除表格</div>
@@ -7201,7 +7202,7 @@ body.text-mode .text-mode-doc { display: block; }
           <p>记录每次需求修订的日期、修改内容、版本号及修订人，便于追溯需求变更历程。</p>
           <table class="doc-table" data-layout-fixed="1" style="table-layout: fixed;">
             <thead>
-              <tr><th style="width: 95.3281px;">日期</th><th style="width: 575.703px; cursor: row-resize;" class="">修改内容</th><th style="width: 64px;">修改版本</th><th style="width: 51px;">修订人</th></tr><tr><th style="width: 95.3281px;"><span style="color: rgb(23, 32, 51); font-weight: 400; text-align: justify;">2026-10-21</span></th><th style="width: 575.703px; cursor: row-resize;" class=""><p><ol><li><span style="font-weight: normal;">质检工作台：删除“客户姓名”列。</span></li><li><span style="font-weight: normal;">微信质检详情：“质检信息”删除“客户微信昵称”，新增“客户微信号”，“微信号”更名为“中台工作微信号”。删除微信沟通记录下的规则命中情况。</span></li><li><span style="font-weight: normal;">通话质检详情：“工作手机号”改为“中台手机号”，“被呼叫号码”改为“客户手机号”，删除“通话来源”；“质检类别”为中台语音外呼的任务新增展示“项目”字段。</span></li><li><span style="font-weight: normal;">视频质检详情：删除“视频类型”字段。</span></li><li><span style="font-weight: normal;">短信质检详情：“工作手机号”改为“中台手机号”。删除短信沟通记录下的规则命中情况</span></li><li><span style="font-weight: normal;">手动转单记录：筛选区新增“任务编号”查询条件。</span></li><li><span style="font-weight: normal;">质检案例库详情弹窗：删除“客户姓名”。</span></li><li><span style="font-weight: normal;">项目时间配置：新建/编辑弹窗删除“启用状态”控件，启用/禁用仅保留列表操作列。</span></li><li><span style="font-weight: normal;">微信质检页面，列表“客户微信昵称”更名为“客户微信号”，“绑定微信号”列更名为“中台工作微信号”</span></li></ol></p></th><th style="width: 64px;">V2.11&nbsp;</th><th style="width: 51px;">&nbsp;王超</th></tr><tr><th style="width: 95.3281px; height: 267.906px;"><p><span style="font-weight: normal;">2026-09-24</span></p></th><th style="width: 575.703px; height: 267.906px;" class=""><p></p><p></p><ol><li><span style="font-weight: normal;">绑定关系配置·微信号绑定页签：新建/编辑绑定弹窗删除"启用状态"配置项，新增"微信类型"下拉（个人微信/企业微信）；微信号绑定列表新增"微信类型"列；</span></li><li><span style="font-weight: normal;">质检记录·SaaS订单质检详情页：SaaS订单信息中"最后一次沟通时间"更名为"创单时间"；</span></li><li><span style="font-weight: normal;">规则配置·项目时间配置页签：新建/编辑项目配置页中，项目名称改为厂商枚举下拉（单选）选择，项目ID由所选厂商自动带出且不可编辑；</span></li><li><span style="font-weight: normal;">规则配置·项目时间配置页签：项目列表删除"审批状态"列；操作列新增"启用/禁用"切换按钮，启用态展示"禁用"按钮，禁用态展示"启用"按钮；</span></li><li><span style="font-weight: normal;">微信质检页：列表新增"微信类型"列，查询条件新增"微信类型"下拉（个人微信/企业微信）；</span></li><li><span style="font-weight: normal;">规则配置·通知提醒页签：删除"未分配质检任务通知"模块，保留"审批中心·待审批任务通知"；</span></li><li><span style="color: rgb(23, 32, 51); font-weight: normal;">微信质检/通话质检/视频质检/短信质检任务详情页面中，质检信息模块增加“质检类别”字段和“人工复检结果”字段。</span></li></ol><p></p><p></p></th><th style="width: 64px; height: 267.906px;" class="">V2.10</th><th style="width: 51px; height: 267.906px;" class="">王超</th></tr><tr><th style="width: 95.3281px;" class=""><p><span style="font-weight: normal;">2026-09-17</span></p></th><th style="width: 575.703px;" class=""><p></p><ol style="color: rgb(23, 32, 51); font-weight: normal;"><li>质检记录页面，<span style="color: rgb(23, 32, 51); font-weight: normal;">数据列表删除“中台人员”、“质检类型”、“质检结果”列，“最后一次沟通时间”更名为“创单时间”，查询条件“质检日期”更改为“创单日期”，删除“中台人员”查询条件；</span><br></li><li><span style="color: rgb(23, 32, 51); font-weight: normal;">质检记录页面，</span><span style="outline: 0px; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgba(59,130,246,.5); --tw-ring-offset-shadow: 0 0 transparent; --tw-ring-shadow: 0 0 transparent; --tw-shadow: 0 0 transparent; --tw-shadow-colored: 0 0 transparent; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ; border: 0px solid rgb(229, 231, 235);">SaaS订单质检详情页，</span><span style="color: rgb(23, 32, 51); font-weight: normal; outline: 0px; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgba(59,130,246,.5); --tw-ring-offset-shadow: 0 0 transparent; --tw-ring-shadow: 0 0 transparent; --tw-shadow: 0 0 transparent; --tw-shadow-colored: 0 0 transparent; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ; border: 0px solid rgb(229, 231, 235);">质检记录信息模块，增加“状态”字段和“人工复检结果”字段；<br></span></li><li><span style="font-weight: 400;">人工复检详情页面，复检结论表单模块删除“保存草稿”功能；</span></li></ol><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></th><th style="width: 64px;" class=""><span style="color: rgb(23, 32, 51); font-size: 13px; font-weight: 400; background-color: rgba(59, 130, 246, 0.05);">V2.9</span>&nbsp;</th><th style="width: 51px;" class=""><span style="color: rgb(23, 32, 51); font-size: 13px; font-weight: 400; background-color: rgba(59, 130, 246, 0.05);">王超</span></th></tr><tr><th style="width: 95.3281px;"><span style="color: rgb(23, 32, 51); font-size: 13px; font-weight: 400;">2026-09-10</span>&nbsp;</th><th style="width: 575.703px;"><ol style="color: rgb(23, 32, 51); font-size: 14px; font-weight: 400; background-color: rgba(59, 130, 246, 0.02);"><li>&nbsp;通话质检、视频质检、微信质检、短信质检四类详情页AI质检结果模块改版：取消"检核内容1：明令禁止内容""检核内容2：要求讲明内容"分组展示及"不适用"规则，改为按AI质检接口返回的规则逐项展示（通话7项、视频8项、微信/短信各2项）；同时增加规则是否命中的二次处理逻辑；</li><li style="color: rgb(23, 32, 51);">取消"软通过"判定，任一规则命中即判定AI质检整体结果为"不合格"并需人工复检；人工复检详情页同步按新规则口径调整；</li><li style="color: rgb(23, 32, 51);">质检记录-订单流失影响分析：移除基于严重/重要级别的分类逻辑，改为按AI质检不合格及人工复检结果判定影响等级（高度疑似/疑似/无明显影响）；</li><li style="color: rgb(23, 32, 51);">规则与约束页签：AI质检的检核规则、规则命中判定、结果聚合规则统一为"命中即不合格"口径；</li><li style="color: rgb(23, 32, 51);">人工复检结论：取消“部分合格”选项；</li></ol></th><th style="width: 64px;"><span style="color: rgb(23, 32, 51); font-size: 13px; font-weight: 400; background-color: rgba(59, 130, 246, 0.05);">V2.8</span>&nbsp;</th><th style="width: 51px;"><span style="color: rgb(23, 32, 51); font-size: 13px; font-weight: 400; background-color: rgba(59, 130, 246, 0.05);">王超</span></th></tr>
+              <tr><th style="width: 95.3281px; cursor: row-resize;">日期</th><th style="width: 575.703px;" class="">修改内容</th><th style="width: 64px; cursor: row-resize;">修改版本</th><th style="width: 51px;">修订人</th></tr><tr><th style="width: 95.3281px;"><span style="color: rgb(23, 32, 51); font-weight: 400; text-align: justify;">2026-11-09</span></th><th style="width: 575.703px;" class=""><ol><li><span style="font-weight: normal;">质检案例库， 详情弹窗页面，每个质检任务类型均增加沟通记录展示；</span></li></ol></th><th style="width: 64px;">&nbsp;V2.12</th><th style="width: 51px;">&nbsp;王超</th></tr><tr><th style="width: 95.3281px;"><span style="color: rgb(23, 32, 51); font-weight: 400; text-align: justify;">2026-10-21</span></th><th style="width: 575.703px;" class=""><p></p><ol><li><span style="font-weight: normal;">质检工作台：删除“客户姓名”列。</span></li><li><span style="font-weight: normal;">微信质检详情：“质检信息”删除“客户微信昵称”，新增“客户微信号”，“微信号”更名为“中台工作微信号”。删除微信沟通记录下的规则命中情况。</span></li><li><span style="font-weight: normal;">通话质检详情：“工作手机号”改为“中台手机号”，“被呼叫号码”改为“客户手机号”，删除“通话来源”；“质检类别”为中台语音外呼的任务新增展示“项目”字段。</span></li><li><span style="font-weight: normal;">视频质检详情：删除“视频类型”字段。</span></li><li><span style="font-weight: normal;">短信质检详情：“工作手机号”改为“中台手机号”。删除短信沟通记录下的规则命中情况</span></li><li><span style="font-weight: normal;">手动转单记录：筛选区新增“任务编号”查询条件。</span></li><li><span style="font-weight: normal;">质检案例库详情弹窗：删除“客户姓名”。</span></li><li><span style="font-weight: normal;">项目时间配置：新建/编辑弹窗删除“启用状态”控件，启用/禁用仅保留列表操作列。</span></li><li><span style="font-weight: normal;">微信质检页面，列表“客户微信昵称”更名为“客户微信号”，“绑定微信号”列更名为“中台工作微信号”</span></li></ol><p></p></th><th style="width: 64px;" class="">V2.11&nbsp;</th><th style="width: 51px;">&nbsp;王超</th></tr><tr><th style="width: 95.3281px; height: 267.906px;"><p><span style="font-weight: normal;">2026-09-24</span></p></th><th style="width: 575.703px; height: 267.906px;" class=""><p></p><p></p><ol><li><span style="font-weight: normal;">绑定关系配置·微信号绑定页签：新建/编辑绑定弹窗删除"启用状态"配置项，新增"微信类型"下拉（个人微信/企业微信）；微信号绑定列表新增"微信类型"列；</span></li><li><span style="font-weight: normal;">质检记录·SaaS订单质检详情页：SaaS订单信息中"最后一次沟通时间"更名为"创单时间"；</span></li><li><span style="font-weight: normal;">规则配置·项目时间配置页签：新建/编辑项目配置页中，项目名称改为厂商枚举下拉（单选）选择，项目ID由所选厂商自动带出且不可编辑；</span></li><li><span style="font-weight: normal;">规则配置·项目时间配置页签：项目列表删除"审批状态"列；操作列新增"启用/禁用"切换按钮，启用态展示"禁用"按钮，禁用态展示"启用"按钮；</span></li><li><span style="font-weight: normal;">微信质检页：列表新增"微信类型"列，查询条件新增"微信类型"下拉（个人微信/企业微信）；</span></li><li><span style="font-weight: normal;">规则配置·通知提醒页签：删除"未分配质检任务通知"模块，保留"审批中心·待审批任务通知"；</span></li><li><span style="color: rgb(23, 32, 51); font-weight: normal;">微信质检/通话质检/视频质检/短信质检任务详情页面中，质检信息模块增加“质检类别”字段和“人工复检结果”字段。</span></li></ol><p></p><p></p></th><th style="width: 64px; height: 267.906px;" class="">V2.10</th><th style="width: 51px; height: 267.906px;" class="">王超</th></tr><tr><th style="width: 95.3281px;" class=""><p><span style="font-weight: normal;">2026-09-17</span></p></th><th style="width: 575.703px;" class=""><p></p><ol style="color: rgb(23, 32, 51); font-weight: normal;"><li>质检记录页面，<span style="color: rgb(23, 32, 51); font-weight: normal;">数据列表删除“中台人员”、“质检类型”、“质检结果”列，“最后一次沟通时间”更名为“创单时间”，查询条件“质检日期”更改为“创单日期”，删除“中台人员”查询条件；</span><br></li><li><span style="color: rgb(23, 32, 51); font-weight: normal;">质检记录页面，</span><span style="outline: 0px; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgba(59,130,246,.5); --tw-ring-offset-shadow: 0 0 transparent; --tw-ring-shadow: 0 0 transparent; --tw-shadow: 0 0 transparent; --tw-shadow-colored: 0 0 transparent; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ; border: 0px solid rgb(229, 231, 235);">SaaS订单质检详情页，</span><span style="color: rgb(23, 32, 51); font-weight: normal; outline: 0px; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgba(59,130,246,.5); --tw-ring-offset-shadow: 0 0 transparent; --tw-ring-shadow: 0 0 transparent; --tw-shadow: 0 0 transparent; --tw-shadow-colored: 0 0 transparent; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ; border: 0px solid rgb(229, 231, 235);">质检记录信息模块，增加“状态”字段和“人工复检结果”字段；<br></span></li><li><span style="font-weight: 400;">人工复检详情页面，复检结论表单模块删除“保存草稿”功能；</span></li></ol><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></th><th style="width: 64px;" class=""><span style="color: rgb(23, 32, 51); font-size: 13px; font-weight: 400; background-color: rgba(59, 130, 246, 0.05);">V2.9</span>&nbsp;</th><th style="width: 51px;" class=""><span style="color: rgb(23, 32, 51); font-size: 13px; font-weight: 400; background-color: rgba(59, 130, 246, 0.05);">王超</span></th></tr><tr><th style="width: 95.3281px;"><span style="color: rgb(23, 32, 51); font-size: 13px; font-weight: 400;">2026-09-10</span>&nbsp;</th><th style="width: 575.703px;"><ol style="color: rgb(23, 32, 51); font-size: 14px; font-weight: 400; background-color: rgba(59, 130, 246, 0.02);"><li>&nbsp;通话质检、视频质检、微信质检、短信质检四类详情页AI质检结果模块改版：取消"检核内容1：明令禁止内容""检核内容2：要求讲明内容"分组展示及"不适用"规则，改为按AI质检接口返回的规则逐项展示（通话7项、视频8项、微信/短信各2项）；同时增加规则是否命中的二次处理逻辑；</li><li style="color: rgb(23, 32, 51);">取消"软通过"判定，任一规则命中即判定AI质检整体结果为"不合格"并需人工复检；人工复检详情页同步按新规则口径调整；</li><li style="color: rgb(23, 32, 51);">质检记录-订单流失影响分析：移除基于严重/重要级别的分类逻辑，改为按AI质检不合格及人工复检结果判定影响等级（高度疑似/疑似/无明显影响）；</li><li style="color: rgb(23, 32, 51);">规则与约束页签：AI质检的检核规则、规则命中判定、结果聚合规则统一为"命中即不合格"口径；</li><li style="color: rgb(23, 32, 51);">人工复检结论：取消“部分合格”选项；</li></ol></th><th style="width: 64px;"><span style="color: rgb(23, 32, 51); font-size: 13px; font-weight: 400; background-color: rgba(59, 130, 246, 0.05);">V2.8</span>&nbsp;</th><th style="width: 51px;"><span style="color: rgb(23, 32, 51); font-size: 13px; font-weight: 400; background-color: rgba(59, 130, 246, 0.05);">王超</span></th></tr>
             </thead>
             <tbody>
               <tr>
@@ -7232,14 +7233,14 @@ body.text-mode .text-mode-doc { display: block; }
                 <td style="width: 51px;">王超</td>
               </tr>
               <tr>
-                <td style="width: 95.3281px; cursor: col-resize;">2026-08-24</td>
+                <td style="width: 95.3281px;">2026-08-24</td>
                 <td style="width: 575.703px;"><ol><li>质检任务状态统一为待质检/待复检/已完成三态（移除已复检）；</li><li>AI不合格且已完成任务详情页右半边展示人工复检结论（含复检结论、违规类型分类、复检说明、案例标记）；</li><li>导出按钮增加超一年跨度不允许导出限制；</li><li>规则配置质检任务分配权重不足100%二次确认；</li><li>新增企业微信通知提醒配置；</li><li>绑定关系配置所属团队统一为"新车直销业务团队"；</li></ol></td>
                 <td style="width: 64px;">V2.3</td>
                 <td style="width: 51px;">王超</td>
               </tr>
               <tr>
                 <td style="width: 95.3281px;">2026-08-24</td>
-                <td style="width: 575.703px; cursor: row-resize;"><ol><li>质检工作台默认展示10条待处理任务并按AI质检日期降序排列；</li><li>微信/通话/视频/短信质检新增批量转单功能（已完成状态勾选框禁用）；</li></ol></td>
+                <td style="width: 575.703px;"><ol><li>质检工作台默认展示10条待处理任务并按AI质检日期降序排列；</li><li>微信/通话/视频/短信质检新增批量转单功能（已完成状态勾选框禁用）；</li></ol></td>
                 <td style="width: 64px;">V2.2</td>
                 <td style="width: 51px;">王超</td>
               </tr>
@@ -7538,7 +7539,7 @@ body.text-mode .text-mode-doc { display: block; }
       </div>
 
       <!-- Tab: Detail -->
-      <div class="tab-pane active" id="tab-detail" style="">
+      <div class="tab-pane" id="tab-detail" style="">
         
         <div class="edit-mode-banner"><span class="dot"></span>此页签内容可直接编辑，点击文字即可修改</div>
         <div class="doc-section">
@@ -8157,7 +8158,7 @@ body.text-mode .text-mode-doc { display: block; }
 </div>
 
 <!-- ===== Link Indicator ===== -->
-<div class="link-indicator" id="linkIndicator">→ 质检任务分配与转单</div>
+<div class="link-indicator" id="linkIndicator">→ 质检记录</div>
 
 <!-- ===== Text Mode Document ===== -->
 <div class="text-mode-doc" id="textModeDoc"></div>
@@ -8241,10 +8242,10 @@ body.text-mode .text-mode-doc { display: block; }
 <div class="modal-overlay" id="modalCaseDetail">
   <div class="modal-box" style="max-width:780px;">
     <div class="modal-header">
-      <h3 id="caseDetailTitle">案例质检详情 — CALL20260803001</h3>
+      <h3 id="caseDetailTitle">案例质检详情 — CALL20260803002</h3>
       <button class="modal-close" type="button" onclick="closeModal('modalCaseDetail')">×</button>
     </div>
-    <div class="modal-body" id="caseDetailBody"><div class="case-detail-section"><h4>质检案例信息</h4><div class="case-detail-info"><div><div class="label">质检编号</div><div class="value">CALL20260803001</div></div><div><div class="label">案例类型</div><div class="value"><span class="badge badge-success">优秀案例</span></div></div><div><div class="label">质检类别</div><div class="value">中台语音外呼</div></div><div><div class="label">客户手机号</div><div class="value">139****2011</div></div><div><div class="label">项目</div><div class="value">某品牌A</div></div><div><div class="label">中台团队</div><div class="value">华东中台A组</div></div><div><div class="label">中台人员</div><div class="value">周某</div></div><div><div class="label">AI质检日期</div><div class="value">2026-08-03</div></div></div></div><div class="case-detail-section"><h4>人工复检 · 复检说明</h4><p style="font-size:13px;color:var(--text-secondary);">复检认为该客服在通话中完整完成自我介绍，对利率、还款方式及风险提示等关键条款均说明清晰，无违规表述，判定为合格并评定为优秀案例。</p></div><div class="case-detail-section"><h4>AI质检结果（类目命中情况）</h4><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">承诺性表述 （明令禁止）</div><div class="inspection-desc" style="color:var(--success-color);">✅ 未命中 — 合格</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">误导性表述 （明令禁止）</div><div class="inspection-desc" style="color:var(--success-color);">✅ 未命中 — 合格</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">不当语气用词 （明令禁止）</div><div class="inspection-desc" style="color:var(--success-color);">✅ 未命中 — 合格</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">泄露客户信息 （明令禁止）</div><div class="inspection-desc" style="color:var(--success-color);">✅ 未命中 — 合格</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">自我介绍 （要求讲明）</div><div class="inspection-desc" style="color:var(--success-color);">✅ 已讲明 — 合格</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">重点条款说明 （要求讲明）</div><div class="inspection-desc" style="color:var(--success-color);">✅ 已讲明 — 合格</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">风险提示 （要求讲明）</div><div class="inspection-desc" style="color:var(--success-color);">✅ 已讲明 — 合格</div></div></div></div><div class="case-detail-section"><h4>质检结论</h4><p style="font-size:14px;font-weight:600;color:var(--success-color);">合格 — 优秀案例</p></div></div>
+    <div class="modal-body" id="caseDetailBody"><div class="case-detail-section"><h4>质检案例信息</h4><div class="case-detail-info"><div><div class="label">质检编号</div><div class="value">CALL20260803002</div></div><div><div class="label">案例类型</div><div class="value"><span class="badge badge-danger">违规案例</span></div></div><div><div class="label">质检类别</div><div class="value">工作手机通话</div></div><div><div class="label">客户手机号</div><div class="value">139****2012</div></div><div><div class="label">项目</div><div class="value">某品牌B</div></div><div><div class="label">中台团队</div><div class="value">华南中台B组</div></div><div><div class="label">中台人员</div><div class="value">吴某</div></div><div><div class="label">AI质检日期</div><div class="value">2026-08-03</div></div></div></div><div class="case-detail-section"><h4>人工复检 · 复检说明</h4><p style="font-size:13px;color:var(--text-secondary);">复检确认该记录的"利率不会变/可放心签约"表述构成承诺性违规，且未对风险提示进行讲明，AI判定不合格成立，判定为违规案例。</p></div><div class="case-detail-section"><h4>AI质检结果（类目命中情况）</h4><div class="inspection-item"><div class="inspection-icon fail">✕</div><div class="inspection-content"><div class="inspection-name">承诺性表述 （明令禁止）</div><div class="inspection-desc" style="color:var(--danger-color);">❌ 命中违规 — 不合格</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">误导性表述 （明令禁止）</div><div class="inspection-desc" style="color:var(--success-color);">✅ 未命中 — 合格</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">不当语气用词 （明令禁止）</div><div class="inspection-desc" style="color:var(--success-color);">✅ 未命中 — 合格</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">泄露客户信息 （明令禁止）</div><div class="inspection-desc" style="color:var(--success-color);">✅ 未命中 — 合格</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">自我介绍 （要求讲明）</div><div class="inspection-desc" style="color:var(--success-color);">✅ 已讲明 — 合格</div></div></div><div class="inspection-item"><div class="inspection-icon pass">✓</div><div class="inspection-content"><div class="inspection-name">重点条款说明 （要求讲明）</div><div class="inspection-desc" style="color:var(--success-color);">✅ 已讲明 — 合格</div></div></div><div class="inspection-item"><div class="inspection-icon fail">✕</div><div class="inspection-content"><div class="inspection-name">风险提示 （要求讲明）</div><div class="inspection-desc" style="color:var(--danger-color);">❌ 未讲明 — 不合格</div></div></div></div><div class="case-detail-section"><h4>质检结论</h4><p style="font-size:14px;font-weight:600;color:var(--danger-color);">不合格 — 命中"承诺性表述"类目</p></div><div class="case-detail-section"><h4>语音通话记录</h4><div class="comm-record"><div class="comm-record-header"><div class="comm-record-type"><span class="comm-record-num">1</span><span class="badge badge-neutral">工作手机通话</span>中台 → 客户</div><div class="comm-record-time">2026-08-03 11:05 | 时长 08:32</div></div><div class="audio-player-mock"><button class="audio-play-btn" type="button">▶</button><div class="audio-progress"></div><span class="audio-time">02:58 / 08:32</span></div><div class="transcript"><strong>中台：</strong>李女士您好，我是吴某，工号XXXX，关于您申请的车贷方案跟您确认一下。<br><br><strong>中台：</strong><span class="violation-mark">这个利率肯定不会变的，您可以放心签约。</span><br><br><strong>客户：</strong>那还款方式呢？<br><br><strong>中台：</strong>等额本息分36期，具体以合同为准。</div></div><div class="comm-record"><div class="comm-record-header"><div class="comm-record-type"><span class="comm-record-num">2</span><span class="badge badge-info">SAAS平台外呼</span>中台 → 客户</div><div class="comm-record-time">2026-08-03 16:20 | 时长 03:12</div></div><div class="audio-player-mock"><button class="audio-play-btn" type="button">▶</button><div class="audio-progress"></div><span class="audio-time">00:48 / 03:12</span></div><div class="transcript"><strong>中台：</strong>合同已经发您了，您有空看一下。<br><br><strong>客户：</strong>好的，我看完再回复。</div></div></div></div>
     <div class="modal-footer">
       <button class="filter-btn secondary" type="button" onclick="closeModal('modalCaseDetail')">关闭</button>
     </div>
@@ -9090,11 +9091,19 @@ var taskDetailData = {
 };
 
 var AI_RULES = {
-  call: ['服务忌语', '合规禁用词', '购车/融资信息核实', '个人信息核实', '基本信息核实', '核实购车真实性', '核实用途真实性', '个人直系亲属信息核实', '个人其他联系人信息核实'],
-  vid: ['服务忌语', '合规禁用词', '个人信息', '购车信息', '职业与收入情况', '居住与工作地址', '直系亲属信息', '融资信息', '法律责任与征信', '视频核验'],
+  // 通话：前 5 项为"已说明/未说明"类，后 2 项为"命中/未命中"类
+  call: ['直系亲属融资购车核实', '直系亲属基本信息核实', '直系亲属核实购车', '直系亲属个人信息核实', '其他联系人个人信息核实', '服务忌语', '合规禁用词'],
+  // 视频：前 9 项为"已说明/未说明"类，后 2 项为"命中/未命中"类
+  vid: ['购车信息', '融资信息', '融资风险信息', '视频核验', '法律与征信', '直系亲属信息', '职业与收入情况', '居住与工作地址', '个人信息', '服务忌语', '合规禁用词'],
   wx: ['服务忌语', '合规禁用词'],
   sms: ['服务忌语', '合规禁用词']
 };
+
+// 命中类规则（仅这两项展示"是否命中"），其余通话/视频规则展示"已说明/未说明"
+var AI_HIT_RULES = ['服务忌语', '合规禁用词'];
+function isStatedRule(t, name) {
+  return (t === 'call' || t === 'vid') && AI_HIT_RULES.indexOf(name) === -1;
+}
 
 // 通话/视频示例任务补充 AI 检核数据（aiC）：使人工复检违规类型分类自动勾选"命中"项，且"不适用"项不出现；
 // 其说明文案仅保留"命中/未命中/已讲明/未讲明"，其余（严重级别/原文等）一律省略。
@@ -9104,10 +9113,12 @@ var AI_RULES = {
   var mk = function (t, hits, src) {
     var rules = {};
     (AI_RULES[t] || AI_RULES.wx).forEach(function (n) {
-      rules[n] = { st: 'pass', desc: '未命中' };
+      rules[n] = { st: 'pass', desc: isStatedRule(t, n) ? '已说明' : '未命中' };
     });
     (hits || []).forEach(function (n) {
-      if (rules.hasOwnProperty(n)) rules[n] = { st: 'fail', desc: '命中' + (src ? ' · ' + src : '') };
+      if (rules.hasOwnProperty(n)) {
+        rules[n] = { st: 'fail', desc: isStatedRule(t, n) ? '未说明' : ('命中' + (src ? ' · ' + src : '')) };
+      }
     });
     var overall = 'pass';
     for (var k in rules) { if (rules[k].st === 'fail') { overall = 'fail'; break; } }
@@ -9120,9 +9131,9 @@ var AI_RULES = {
     // 微信
     'WX20260803001': [], 'WX20260803002': ['服务忌语'], 'WX20260803003': [], 'WX20260803004': ['服务忌语'], 'WX20260803006': ['服务忌语'], 'WX20260813003': ['合规禁用词'], 'WX20260728009': ['服务忌语'],
     // 通话
-    'CALL20260803001': [], 'CALL20260803002': ['购车/融资信息核实'], 'CALL20260803003': [], 'CALL20260803004': ['核实购车真实性'], 'CALL20260803006': ['个人直系亲属信息核实'], 'CALL20260802005': ['个人信息核实'], 'CALL20260801012': ['核实用途真实性'], 'CALL20260729005': ['基本信息核实'], 'CALL20260815001': ['个人其他联系人信息核实'], 'CALL20260815002': [], 'CALL20260815003': ['核实购车真实性'], 'CALL20260815004': [],
+    'CALL20260803001': [], 'CALL20260803002': ['直系亲属融资购车核实'], 'CALL20260803003': [], 'CALL20260803004': ['直系亲属核实购车'], 'CALL20260803006': ['直系亲属个人信息核实'], 'CALL20260802005': ['直系亲属个人信息核实'], 'CALL20260801012': ['直系亲属核实购车'], 'CALL20260729005': ['直系亲属基本信息核实'], 'CALL20260815001': ['其他联系人个人信息核实'], 'CALL20260815002': [], 'CALL20260815003': ['直系亲属核实购车'], 'CALL20260815004': [],
     // 视频
-    'VID20260801001': ['个人信息', '视频核验'], 'VID20260730002': [], 'VID20260729003': [], 'VID20260805004': [], 'VID20260804005': [], 'VID20260803006': [], 'VID20260802007': [], 'VID20260801008': [], 'VID20260731009': ['购车信息'], 'VID20260813001': ['职业与收入情况'], 'VID20260803002': ['居住与工作地址'], 'VID20260803007': ['直系亲属信息'], 'VID20260815001': ['融资信息'], 'VID20260815002': [], 'VID20260815003': ['法律责任与征信'], 'VID20260815004': [],
+    'VID20260801001': ['个人信息', '视频核验'], 'VID20260730002': [], 'VID20260729003': [], 'VID20260805004': [], 'VID20260804005': [], 'VID20260803006': [], 'VID20260802007': [], 'VID20260801008': [], 'VID20260731009': ['购车信息'], 'VID20260813001': ['职业与收入情况'], 'VID20260803002': ['居住与工作地址'], 'VID20260803007': ['直系亲属信息'], 'VID20260815001': ['融资信息'], 'VID20260815002': [], 'VID20260815003': ['法律与征信'], 'VID20260815004': [],
     // 短信
     'SMS20260803001': [], 'SMS20260803002': ['服务忌语'], 'SMS20260803003': [], 'SMS20260803004': ['合规禁用词'], 'SMS20260802001': ['合规禁用词'], 'SMS20260803006': ['服务忌语']
   };
@@ -9151,17 +9162,18 @@ function aiOverallTag(st) {
   if (st === 'na') return '<span style="color:var(--text-muted);font-weight:600;margin-left:6px;">不适用</span>';
   return '<span style="color:var(--warning-color);font-weight:600;margin-left:6px;">软通过</span>';
 }
-function aiRuleItem(name, st, desc) {
+function aiRuleItem(name, st, desc, t) {
   // 仅保留状态词：去除"未讲明/命中"等后面的括号内容（如（严重级别，不通过））
   desc = (desc || '').replace(/（[^）]*）/g, '').replace(/\([^)]*\)/g, '').trim();
+  var stated = isStatedRule(t, name);
   var icon;
   if (st === 'pass') icon = '<div class="inspection-icon pass">\u2713</div>';
-  else if (st === 'fail') icon = '<div class="inspection-icon warn">!</div>';
+  else if (st === 'fail') icon = stated ? '<div class="inspection-icon fail">\u2717</div>' : '<div class="inspection-icon warn">!</div>';
   else icon = '<div class="inspection-icon" style="background:#e9ecef;color:#6c757d;">—</div>';
   var descHtml;
-  if (st === 'fail') descHtml = '<div class="inspection-desc" style="color:var(--danger-color);">' + (desc || '命中') + '</div>';
+  if (st === 'fail') descHtml = '<div class="inspection-desc" style="color:var(--danger-color);">' + (stated ? '未说明' : (desc || '命中')) + '</div>';
   else if (st === 'na') descHtml = '<div class="inspection-desc" style="color:var(--text-muted,#94a3b8);">不适用</div>';
-  else descHtml = '<div class="inspection-desc">' + (desc || '未命中') + '</div>';
+  else descHtml = '<div class="inspection-desc">' + (stated ? '已说明' : (desc || '未命中')) + '</div>';
   return '<div class="inspection-item">' + icon + '<div class="inspection-content"><div class="inspection-name">' + name + '</div>' + descHtml + '</div></div>';
 }
 // AI待质检状态下的检核项（灰色占位，不出现命中/未命中/讲明字样）
@@ -9183,7 +9195,7 @@ function renderPendingAiResultCard(page, d) {
 }
 // 生成AI质检结果模块正文（各合规规则命中状态 + 说明），供详情页与质检记录订单详情页共用
 function buildAiResultBodyHtml(d) {
-  // 订单详情任务类目（video/wechat）归一化为 AI_RULES 的键（vid/wx），确保视频任务按10项规则展示
+  // 订单详情任务类目（video/wechat）归一化为 AI_RULES 的键（vid/wx），确保视频任务按11项规则展示
   var _t = ({ call: 'call', video: 'vid', wechat: 'wx', sms: 'sms' })[d.t] || d.t || 'wx';
   d.t = _t;
   if (d.aiC && d.aiC.rules) {
@@ -9195,9 +9207,9 @@ function buildAiResultBodyHtml(d) {
     var h = '<div style="font-size:13px;font-weight:600;color:var(--text-secondary);margin-bottom:6px;">AI质检整体结果 ' + tag + '</div>';
     for (var i = 0; i < order.length; i++) {
       var it = d.aiC.rules[order[i]];
-      h += aiRuleItem(order[i], it ? it.st : 'pass', it ? it.desc : '未命中');
+      h += aiRuleItem(order[i], it ? it.st : 'pass', it ? it.desc : '未命中', _t);
     }
-    h += '<div class="callout" style="margin-top:8px;font-size:12px;color:var(--text-muted);">注：AI质检按上表合规规则逐项核查。若任一项"命中"，则AI质检结果为不合格，需进行人工复检。</div>';
+    h += '<div class="callout" style="margin-top:8px;font-size:12px;color:var(--text-muted);">注：AI质检按上表规则逐项核查。命中类规则（服务忌语、合规禁用词）任一命中，或说明类规则任一未说明，则AI质检结果为不合格，需进行人工复检。</div>';
     return h;
   }
 
@@ -9209,7 +9221,7 @@ function buildAiResultBodyHtml(d) {
     var n1 = c1Order[i];
     if (!d.aiC.c1 || !d.aiC.c1.hasOwnProperty(n1)) continue;
     var r1 = d.aiC.c1[n1];
-    html += aiRuleItem(n1, r1.st, r1.desc);
+    html += aiRuleItem(n1, r1.st, r1.desc, d.t);
   }
   var c2 = d.aiC.c2;
   if ((d.t === 'wx' || d.t === 'sms') && (!c2 || c2 === null)) {
@@ -9221,7 +9233,7 @@ function buildAiResultBodyHtml(d) {
     for (var j = 0; j < c2Order.length; j++) {
       var n2 = c2Order[j];
       var r2 = c2[n2];
-      html += aiRuleItem(n2, r2 ? r2.st : 'na', r2 ? r2.desc : '不适用');
+      html += aiRuleItem(n2, r2 ? r2.st : 'na', r2 ? r2.desc : '不适用', d.t);
     }
   }
   html += '<div class="callout" style="margin-top:8px;font-size:12px;color:var(--text-muted);">注：AI质检结果仅展示是否命中检核内容中的类目及来源记录，具体命中明细和时段由外部AI接口返回，本平台不展示AI模型内部命中的细节内容。检核内容整体状态：命中"严重"级别规则显示"不通过"，仅命中"重要"级别规则显示"软通过"（黄色），未命中任何规则显示"通过"。' + (d.t === 'sms' ? '短信质检仅检核明令禁止内容，要求讲明内容不适用于短信场景。' : '') + '</div>';
@@ -9480,7 +9492,7 @@ var orderLogDetailData = {
             { name: '合规禁用词', hit: '命中', miss: true, source: '语音通话记录②' }
           ]},
           { group: '信息核实', groupResult: '通过', items: [
-            { name: '个人信息核实', hit: '未命中', miss: false }
+            { name: '直系亲属个人信息核实', hit: '未命中', miss: false }
           ]}
         ],
         media: [
@@ -9505,7 +9517,7 @@ var orderLogDetailData = {
         scenario: '视频面签风控核验', aiDate: '2026-08-06', result: '不合格',
         score: 58, mediaLabel: '视频沟通记录', aiGroups: [
           { group: '合规规则', groupResult: '不通过', items: [
-            { name: '法律责任与征信', hit: '命中', miss: true, source: '视频沟通记录①' },
+            { name: '法律与征信', hit: '命中', miss: true, source: '视频沟通记录①' },
             { name: '视频核验', hit: '命中', miss: true, source: '视频沟通记录①' }
           ]},
           { group: '个人信息', groupResult: '通过', items: [
@@ -9561,8 +9573,8 @@ var orderLogDetailData = {
       scenario: '中台语音外呼话术合规检核', aiDate: '2026-08-08', result: '待复检',
       score: 72, aiGroups: [
         { group: '信息核实', groupResult: '不通过', items: [
-          { name: '核实购车真实性', hit: '未命中', miss: false },
-          { name: '核实用途真实性', hit: '命中', miss: true, source: '语音通话记录②' }
+          { name: '直系亲属核实购车', hit: '未命中', miss: false },
+          { name: '直系亲属融资购车核实', hit: '命中', miss: true, source: '语音通话记录②' }
         ]}
       ],
       media: [
@@ -9592,8 +9604,8 @@ var orderLogDetailData = {
             { name: '合规禁用词', hit: '命中', miss: true, source: '语音通话记录①' }
           ]},
           { group: '信息核实', groupResult: '不通过', items: [
-            { name: '购车/融资信息核实', hit: '未命中', miss: false },
-            { name: '核实用途真实性', hit: '命中', miss: true, source: '语音通话记录②' }
+            { name: '直系亲属核实购车', hit: '未命中', miss: false },
+            { name: '直系亲属融资购车核实', hit: '命中', miss: true, source: '语音通话记录②' }
           ]}
         ],
         media: [
@@ -9613,7 +9625,7 @@ var orderLogDetailData = {
         scenario: '人工视频播报', aiDate: '2026-08-08', result: '不合格',
         score: 61, aiGroups: [
           { group: '合规规则', groupResult: '不通过', items: [
-            { name: '法律责任与征信', hit: '命中', miss: true, source: '视频沟通记录①' },
+            { name: '法律与征信', hit: '命中', miss: true, source: '视频沟通记录①' },
             { name: '视频核验', hit: '命中', miss: true, source: '视频沟通记录①' }
           ]}
         ],
@@ -9660,7 +9672,7 @@ var orderLogDetailData = {
           { name: '合规禁用词', hit: '命中', miss: true, source: '语音通话记录①' }
         ]},
         { group: '信息核实', groupResult: '通过', items: [
-          { name: '购车/融资信息核实', hit: '未命中', miss: false }
+          { name: '直系亲属核实购车', hit: '未命中', miss: false }
         ]}
       ],
       media: [
@@ -10971,6 +10983,167 @@ document.addEventListener('click', function(e) {
 });
 
 // ===== Case Detail Modal =====
+// 案例库详情页底部：按质检类型展示原始沟通记录
+// kind: audio=语音通话记录 / video=视频沟通记录 / text=文字消息记录或短信记录
+var caseCommMap = {
+  'CALL20260803001': { records: [
+    { kind: 'audio', badge: 'SAAS平台外呼', cls: 'badge-info', meta: '中台 → 客户', time: '2026-08-03 10:12', dur: '06:48', cur: '03:20', lines: [
+      ['中台', '您好，张先生，我是XX金融华南中台的周某，工号XXXX，本次通话全程录音。'],
+      ['中台', '您申请的某品牌A汽车金融方案，贷款金额18万元，年化利率X%，还款方式为等额本息分36期。'],
+      ['客户', '利率后面会不会变？'],
+      ['中台', '利率以合同约定为准，签约后不再变动；如逾期还款会产生违约金，并影响个人征信，请您知悉。']
+    ]},
+    { kind: 'audio', badge: '工作手机通话', cls: 'badge-neutral', meta: '中台 → 客户', time: '2026-08-03 15:40', dur: '02:26', cur: '01:05', lines: [
+      ['中台', '张先生您好，补充确认一下您的上牌地址和提车时间。'],
+      ['客户', '本月内提车，地址稍后发您微信。'],
+      ['中台', '好的，收到后我这边同步给交付顾问。']
+    ]}
+  ]},
+  'CALL20260803002': { records: [
+    { kind: 'audio', badge: '工作手机通话', cls: 'badge-neutral', meta: '中台 → 客户', time: '2026-08-03 11:05', dur: '08:32', cur: '02:58', lines: [
+      ['中台', '李女士您好，我是吴某，工号XXXX，关于您申请的车贷方案跟您确认一下。'],
+      ['中台', '这个利率肯定不会变的，您可以放心签约。', true],
+      ['客户', '那还款方式呢？'],
+      ['中台', '等额本息分36期，具体以合同为准。']
+    ]},
+    { kind: 'audio', badge: 'SAAS平台外呼', cls: 'badge-info', meta: '中台 → 客户', time: '2026-08-03 16:20', dur: '03:12', cur: '00:48', lines: [
+      ['中台', '合同已经发您了，您有空看一下。'],
+      ['客户', '好的，我看完再回复。']
+    ]}
+  ]},
+  'WX20260802003': { records: [
+    { kind: 'text', badge: '工作手机个人微信', cls: 'badge-neutral', pre: '[微信] ', time: '2026-08-02 09:20', lines: [
+      ['郑某', '王先生您好，您咨询的某品牌C金融方案资料已发您。'],
+      ['客户', '首付大概多少？'],
+      ['郑某', '首付三成，月供大概四千六，具体以审批结果为准。']
+    ]},
+    { kind: 'text', badge: '工作手机企业微信', cls: 'badge-neutral', pre: '[企微] ', time: '2026-08-02 15:35', lines: [
+      ['郑某', '补充一下，材料清单在上一条消息里，麻烦按清单准备。'],
+      ['客户', '收到，明天发你。']
+    ]}
+  ]},
+  'VID20260802004': { records: [
+    { kind: 'video', badge: '场景风控视频', cls: 'badge-info', meta: '风控节点视频', time: '2026-08-02 14:50', dur: '05:18', lines: [
+      ['风控', '刘先生您好，本次为风控节点视频面签，需确认您的身份信息及购车意愿。'],
+      ['客户', '好的，确认无误。'],
+      ['风控', '请确认贷款金额、利率及还款期限。'],
+      ['客户', '确认。']
+    ]},
+    { kind: 'video', badge: '视频面签', cls: 'badge-info', meta: '视频面签', time: '2026-08-02 15:20', dur: '04:02', lines: [
+      ['中台', '请出示身份证件……确认身份信息无误，下面为您确认合同条款。'],
+      ['中台', '本次贷款年化利率X%，还款方式为等额本息分36期，逾期会产生违约金并影响个人征信。'],
+      ['客户', '知道了。']
+    ]},
+    { kind: 'video', badge: '人工播报视频', cls: 'badge-info', meta: '风险告知播报', time: '2026-08-02 15:30', dur: '02:15', lines: [
+      ['播报', '尊敬的客户，您正在办理汽车融资业务，请确认已了解贷款金额、利率、期限及还款方式。']
+    ]}
+  ]},
+  'SMS20260801005': { records: [
+    { kind: 'text', badge: '工作手机短信', cls: 'badge-neutral', pre: '[短信] ', time: '2026-08-01 10:00', lines: [
+      ['系统', '【XX金融】赵先生，您的汽车金融方案已审批通过，今日签约可享最低利率。', true]
+    ]},
+    { kind: 'text', badge: '工作手机短信', cls: 'badge-neutral', pre: '[短信] ', time: '2026-08-01 17:30', lines: [
+      ['王某', '【XX金融】限时名额仅剩2个，错过不再有。', true]
+    ]}
+  ]},
+  'CALL20260801006': { records: [
+    { kind: 'audio', badge: 'SAAS平台外呼', cls: 'badge-info', meta: '中台 → 客户', time: '2026-08-01 09:40', dur: '07:15', cur: '04:10', lines: [
+      ['中台', '孙先生您好，我是XX金融华北中台的钱某，工号XXXX，本次通话会全程录音。'],
+      ['中台', '您的贷款金额20万元，年化利率X%，分36期等额本息还款。'],
+      ['客户', '提前还款有违约金吗？'],
+      ['中台', '满12期后提前还款不收违约金，具体以合同为准；逾期还款会影响个人征信。']
+    ]},
+    { kind: 'audio', badge: '工作手机通话', cls: 'badge-neutral', meta: '中台 → 客户', time: '2026-08-01 14:10', dur: '02:50', cur: '01:30', lines: [
+      ['中台', '孙先生，合同和还款计划表已发您，请查收。'],
+      ['客户', '好的，谢谢。']
+    ]}
+  ]},
+  'SMS20260731007': { records: [
+    { kind: 'text', badge: '工作手机短信', cls: 'badge-neutral', pre: '[短信] ', time: '2026-07-31 11:20', lines: [
+      ['孙某', '【XX金融】李女士，本方案为全网最低利率，今天办理再减2000元。', true]
+    ]},
+    { kind: 'text', badge: '工作手机短信', cls: 'badge-neutral', pre: '[短信] ', time: '2026-07-31 16:45', lines: [
+      ['系统', '【XX金融】您的申请资料已收到，请耐心等待审核结果。']
+    ]}
+  ]},
+  'WX20260731008': { records: [
+    { kind: 'text', badge: '工作手机个人微信', cls: 'badge-neutral', pre: '[微信] ', time: '2026-07-31 10:05', lines: [
+      ['李某', '王先生您好，我是XX金融华南中台的李某，工号XXXX，负责您的车贷咨询。'],
+      ['客户', '想问下提前还款怎么算？'],
+      ['李某', '满12期提前还款免违约金；逾期会产生违约金并影响个人征信，请按时还款。']
+    ]},
+    { kind: 'text', badge: '工作手机企业微信', cls: 'badge-neutral', pre: '[企微] ', time: '2026-07-31 15:20', lines: [
+      ['李某', '材料已接收，后续进度我会在这里同步给您。'],
+      ['客户', '好的。']
+    ]}
+  ]},
+  'VID20260731009': { records: [
+    { kind: 'video', badge: '场景风控视频', cls: 'badge-info', meta: '风控节点视频', time: '2026-07-31 14:20', dur: '04:36', lines: [
+      ['风控', '周先生您好，本次为风控节点视频面签，请确认您的购车信息。'],
+      ['客户', '好的。'],
+      ['风控', '信息已核对，进入下一步。']
+    ]},
+    { kind: 'video', badge: '视频面签', cls: 'badge-info', meta: '视频面签', time: '2026-07-31 15:05', dur: '03:20', lines: [
+      ['中台', '请出示身份证件，确认无误后进入下一步。'],
+      ['客户', '好的。']
+    ]}
+  ]},
+  'CALL20260731010': { records: [
+    { kind: 'audio', badge: '工作手机通话', cls: 'badge-neutral', meta: '中台 → 客户', time: '2026-07-31 09:30', dur: '05:02', cur: '02:15', lines: [
+      ['中台', '刘先生您好，我是吴某，工号XXXX，本次通话会全程录音。'],
+      ['中台', '您的车贷方案为贷款15万元、年化利率X%、分36期等额本息。'],
+      ['客户', '明白了。'],
+      ['中台', '请留意按时还款，逾期会产生违约金并影响个人征信。']
+    ]},
+    { kind: 'audio', badge: 'SAAS平台外呼', cls: 'badge-info', meta: '中台 → 客户', time: '2026-07-31 15:50', dur: '06:40', cur: '03:05', lines: [
+      ['中台', '刘先生，跟您确认一下签约时间和上牌城市。'],
+      ['客户', '下周一，上牌在本地。'],
+      ['中台', '好的，我这边安排交付顾问对接。']
+    ]}
+  ]}
+};
+
+function buildCaseCommHtml(data) {
+  var conf = caseCommMap[data.caseId];
+  if (!conf || !conf.records || !conf.records.length) return '';
+  var tabName = data.qcType === '通话' ? '语音通话记录'
+    : data.qcType === '视频' ? '视频沟通记录'
+    : data.qcType === '短信' ? '短信记录' : '文字消息记录';
+  var recs = conf.records.map(function (r, i) {
+    var lines = r.lines.map(function (l) {
+      var txt = l[2] ? '<span class="violation-mark">' + l[1] + '</span>' : l[1];
+      return '<strong>' + (r.pre || '') + l[0] + '：</strong>' + txt;
+    }).join('<br><br>');
+    var media = '';
+    if (r.kind === 'audio') {
+      media = '<div class="audio-player-mock">' +
+        '<button class="audio-play-btn" type="button">▶</button>' +
+        '<div class="audio-progress"></div>' +
+        '<span class="audio-time">' + (r.cur || '00:00') + ' / ' + (r.dur || '00:00') + '</span></div>';
+    } else if (r.kind === 'video') {
+      media = '<div style="background:#1a1a1a;border-radius:6px;height:80px;display:flex;align-items:center;justify-content:center;color:#666;font-size:13px;">视频播放器（模拟）</div>';
+    }
+    var ts = [];
+    if (r.kind === 'video') ts.push('margin-top:8px');
+    if (r.pre) ts.push('line-height:2.2');
+    return '<div class="comm-record">' +
+      '<div class="comm-record-header">' +
+        '<div class="comm-record-type">' +
+          '<span class="comm-record-num">' + (i + 1) + '</span>' +
+          '<span class="badge ' + r.cls + '">' + r.badge + '</span>' + (r.meta || '') +
+        '</div>' +
+        '<div class="comm-record-time">' + r.time + (r.dur ? ' | 时长 ' + r.dur : '') + '</div>' +
+      '</div>' + media +
+      '<div class="transcript"' + (ts.length ? ' style="' + ts.join(';') + '"' : '') + '>' + lines + '</div>' +
+      '</div>';
+  }).join('');
+
+  return '<div class="case-detail-section">' +
+    '<h4>' + tabName + '</h4>' +
+    recs +
+  '</div>';
+}
+
 var caseDataMap = {
   'CALL20260803001': {
     caseId: 'CALL20260803001', type: '优秀', qcType: '通话',
@@ -11194,7 +11367,8 @@ function openCaseDetail(caseId, caseType) {
     '<div class="case-detail-section">' +
       '<h4>质检结论</h4>' +
       '<p style="font-size:14px;font-weight:600;color:' + (caseType === '优秀' ? 'var(--success-color)' : 'var(--danger-color)') + ';">' + data.conclusion + '</p>' +
-    '</div>';
+    '</div>' +
+    buildCaseCommHtml(data);
 
   openModal('modalCaseDetail');
 }
@@ -11523,4 +11697,4 @@ window.addEventListener('DOMContentLoaded', function() {
 
 <div class="mermaidTooltip" style="opacity: 0;"></div><div data-trae-edit-ui="true" class="trae-image-download-btn" title="Download image" style="position: fixed; display: none; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 6px; background: var(--trae-bg-menu, #222427); border: 1px solid var(--trae-border-l2, rgba(255,255,255,0.12)); box-shadow: var(--trae-floating-shadow, 0px 2px 8px 0px rgba(0,0,0,0.2)); color: var(--trae-icon-default, #f5f9fe); cursor: pointer; z-index: 89990; transition: background 0.15s; pointer-events: auto;"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M8 2v8m0 0L5 7m3 3l3-3M3 12h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-    </svg></div><div id="panelToast" class="panel-toast">修改已保存，刷新页面后仍会保留</div></body></html>
+    </svg></div><div id="panelToast" class="panel-toast show">修改已保存，刷新页面后仍会保留</div></body></html>

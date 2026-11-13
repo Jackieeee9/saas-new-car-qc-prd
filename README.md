@@ -37,10 +37,58 @@ python3 -m http.server 8899
 .
 ├── index.html                 # 原型单页（约 4.7 MB，样式/脚本/图片内联）
 ├── _shared/js/echarts.min.js  # 图表依赖（ECharts 5.5.1）
-└── .nojekyll                  # 关闭 Jekyll，保证 _shared 下划线目录被正常发布
+├── .nojekyll                  # 关闭 Jekyll，保证 _shared 下划线目录被正常发布
+├── release.sh                 # 一键发版脚本
+├── scripts/update_readme.py   # 发版时更新本文件的版本号与版本记录
+└── notes/                     # 每个版本的发版说明（Release 正文来源）
 ```
 
 `.nojekyll` 不是可选项：GitHub Pages 默认用 Jekyll 构建，会忽略以下划线开头的目录，缺失该文件时 `_shared/js/echarts.min.js` 将 404。
+
+## 发版流程
+
+拿到新导出的原型 HTML 后，一条命令完成「替换 → 提交 → 打 tag → 推送 → 发 Release → 等 Pages 构建 → 线上验收」：
+
+```bash
+./release.sh "../../【V2.12-查看】SaaS新车直销业务质检功能prd_2026-11-20.html" \
+             --notes notes/v2.12.md
+```
+
+版本号默认从文件名里的 `V2.12` 识别，也可以 `--version v2.12.1` 指定，或 `--bump` 在当前 tag 上自增。
+
+脚本会依次做：
+
+1. 校验输入文件（大小、HTML 结构、是否与线上一致）
+2. 覆盖 `index.html`，按 `--notes` 更新本文件顶部的版本号和「版本记录」表格
+3. 提交、打 `v2.12.0` 标签、推送 `main` 和 tag
+4. 调 API 创建 Release，并把 HTML 作为附件上传（方便离线传阅）
+5. 轮询 Pages 构建，构建完成后访问线上地址，校验首页 200 与 echarts 200
+
+**首次使用**需要存一次 token（存进 macOS Keychain，不落盘、不进仓库）：
+
+```bash
+./release.sh --save-token
+```
+
+Token 用 fine-grained PAT 即可，只需本仓库的 `Contents: Read and write`、`Releases: Read and write`、`Pages: Read`。
+
+**常用参数**
+
+| 参数 | 作用 |
+| --- | --- |
+| `--notes <file>` | 变更说明，同时用于 Release 正文和版本记录摘要 |
+| `--version vX.Y.Z` | 显式指定版本号 |
+| `--bump` | 在最新 tag 上 minor +1 |
+| `--check <file>` | 只做校验，不改任何东西 |
+| `--push-only` | 只把本地提交推上去 |
+| `--resume` | 推送失败后接着跑，跳过提交步骤 |
+| `--no-asset` | 不把 HTML 传为 Release 附件 |
+
+**遇到问题**
+
+- `连不上 api.github.com`：脚本会在改动前退出，仓库保持原样；配好代理后重试（`export HTTPS_PROXY=http://127.0.0.1:7890`）
+- `已存在 tag`：说明该版本发过，换版本号，或 `git tag -d v2.12.0` 后再来
+- 推送中断：本地提交和 tag 已经生成，直接 `./release.sh --resume`
 
 ## 版本记录
 
